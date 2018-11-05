@@ -1,0 +1,670 @@
+/*--------------------------------------------------------------
+>>>>>> CSSeco Styles(usualy overwrite bootsrap styles :))
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+	#  Imports
+	##  Fonts
+    ##  Bootstrap
+	#  CSSeco Variables
+	#  Overides(bs)
+	#  Helper Classes
+	#  CSSeco Styles
+	## Body
+	## Header
+	## Footer
+	## Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#  Imports 
+##  Fonts
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('../fonts/fonts.css');
+
+/*--------------------------------------------------------------
+#  Imports
+##  Bootstrap
+--------------------------------------------------------------*/
+//@import "../../vendor/bs4/scss/bootstrap";
+
+/*--------------------------------------------------------------
+#  CSSeco Variables
+--------------------------------------------------------------*/
+/* BreakPoint */
+$csseco_bp_366	:    366px	!default;
+$csseco_bp_376	:    376px	!default;
+$csseco_bp_391	:    391px	!default;
+$csseco_bp_426	:    426px	!default;
+$csseco_bp_464	:    464px	!default;
+$csseco_bp_477	:    477px	!default;
+$csseco_bp_527	:    527px	!default;
+$csseco_bp_557	:    557px	!default;
+$csseco_bp_541	:    541px	!default;
+$csseco_bp_569	:    569px	!default;
+$csseco_bp_601	:    601px	!default;
+$csseco_bp_649	:    649px	!default;
+$csseco_bp_667	:    667px	!default;
+$csseco_bp_751	:    751px	!default;
+$csseco_bp_768	:    768px	!default;
+$csseco_bp_801	:    801px	!default;
+$csseco_bp_836	:    836px	!default;
+$csseco_bp_901	:    901px	!default;
+$csseco_bp_960	:    960px	!default;
+$csseco_bp_961	:    961px	!default;
+$csseco_bp_1001	:    1001px	!default;
+$csseco_bp_1078	:    1078px	!default;
+$csseco_bp_1081	:    1081px	!default;
+$csseco_bp_1211	:    1211px	!default;
+
+/*--------------------------------------------------------------
+#  Overides(bs)
+--------------------------------------------------------------*/
+body {
+	position: relative;
+    width: 100%;
+    min-width: 320px;
+    max-width: 1920px;
+    margin: auto;
+    background: #2b2d32;
+    font-family: OpenSans;
+}
+
+/*--------------------------------------------------------------
+#  Helper Classes
+--------------------------------------------------------------*/
+.posrel {
+	position: relative!important;
+}
+
+.elem-hidden {
+	display: none!important;
+}
+
+/*--------------------------------------------------------------
+#  CSSeco Styles
+## Body
+--------------------------------------------------------------*/
+div#site-wrapper {
+	header#header,
+	footer#footer,
+	section#section1.subHeader,
+	section#section3.features,
+	footer#footer {
+		> .container {
+			max-width: 1230px;
+		}
+	}
+	section#section2.formSection {
+		> .container {
+			max-width: 1030px;
+		}
+	}
+
+/*--------------------------------------------------------------
+#  CSSeco Styles
+## Header
+--------------------------------------------------------------*/
+	header#header {
+		background-color: #2b2d32;
+		text-align: center;
+		padding: 10px 0;
+		@media screen and (min-width: $csseco_bp_751) {
+			text-align: left;
+		}
+		@media screen and (min-width: $csseco_bp_901) {
+			padding: 15px 0;
+		}
+		a {
+			@media screen and (min-width: $csseco_bp_751) {
+				padding-left: 5px;
+			}
+			@media screen and (min-width: $csseco_bp_901) {
+				padding-left: 15px;
+			}
+			img {
+				//height: 20px; // DELETE THIS(PP)
+			}
+		}
+	}
+	
+/*--------------------------------------------------------------
+#  CSSeco Styles
+## Footer
+--------------------------------------------------------------*/
+	footer#footer {
+		padding: 0 20px;
+		figure {
+			background: url("../imgs/footer/icons-mobile.png") center no-repeat;
+			background-size: contain;
+			height: 64px;
+			margin: 30px auto 0;
+			max-width: 336px;
+			@media screen and (min-width: $csseco_bp_751) {
+				background: url("../imgs/footer/icons.png") center no-repeat;
+				height: 33px;
+				
+				max-width: 628px;
+			}
+		}
+		section {
+			color: #8f8f8f;
+			font-family: Tahoma,Arial,Helvetica,sans-serif;
+			font-size: 12px;
+			margin: auto;
+			max-width: 960px;
+			padding: 20px 0;
+			position: relative;
+			text-align: center;
+			p {
+				margin: 0;
+			}
+		}
+	}
+	
+/*--------------------------------------------------------------
+#  CSSeco Styles
+## Content
+--------------------------------------------------------------*/
+	section#section1.subHeader {
+		background: url('../imgs/section1/bg.jpg') top no-repeat;
+		background-size: auto 330px;
+		min-height: 330px;
+		position: relative;
+		@media screen and (min-width: $csseco_bp_569) {
+			background-size: auto 420px;
+			min-height: 420px;
+		}
+		@media screen and (min-width: $csseco_bp_751) {
+			background-size: auto;
+			min-height: 687px;
+		}
+		&::before {
+    		background-color: rgba(0,0,0,.35);
+			content: '';
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			@media screen and (min-width: $csseco_bp_751) {
+				background: url('../imgs/section1/texture.png') repeat;
+				background-color: inherit;
+			}
+		}
+		.ttlTxt {
+			padding-top: 50px;
+			margin-left: -5px;
+			@media screen and (min-width: $csseco_bp_376) {
+				padding: 80px 5px 0;
+				margin-left: auto;
+			}
+			@media screen and (min-width: $csseco_bp_901) {
+				padding: 80px 15px 0;
+			}
+			@media screen and (min-width: $csseco_bp_1001) {
+				padding: 120px 15px 0;
+			}
+			h2 {
+				color: #fff;
+				font-family: 'Asap-BoldItalic';
+				font-size: 16px;
+				font-weight: 400;
+				list-height: normal;
+				margin: 0;
+    			padding: 0;
+				@media screen and (min-width: $csseco_bp_391) {
+					font-size: 19px;
+				}
+				@media screen and (min-width: $csseco_bp_464) {
+					font-size: 22px;
+				}
+				@media screen and (min-width: $csseco_bp_569) {
+					font-size: 20px;
+				}
+				@media screen and (min-width: $csseco_bp_751) {
+					font-size: 22px;
+				}
+				@media screen and (min-width: $csseco_bp_836) {
+					font-size: 24px;
+				}
+				@media screen and (min-width: $csseco_bp_836) {
+					font-size: 26px;
+				}
+				@media screen and (min-width: $csseco_bp_1078) {
+					font-size: 30px;
+				}
+				br {
+					@media screen and (min-width: $csseco_bp_751) {
+						display: none;
+					}
+				}
+			}
+			h1 {
+				background: #8cc052;
+				color: #fff;
+				display: inline-block;
+				font-family: 'Asap-BoldItalic';
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 18px;
+				margin: 0;
+				padding: 5px 10px 10px;
+				position: relative;
+				text-decoration: underline;
+				@media screen and (min-width: $csseco_bp_391) {
+					font-size: 24px;
+					line-height: 20px;
+				}
+				@media screen and (min-width: $csseco_bp_464) {
+					font-size: 29px;
+  					line-height: 24px;
+				}
+				@media screen and (min-width: $csseco_bp_527) {
+					font-size: 32px;
+					line-height: 24px;
+					padding-top: 5px;
+				}
+				@media screen and (min-width: $csseco_bp_569) {
+					font-size: 21px;
+					line-height: 16px;
+					padding-top: 5px;
+				}
+				@media screen and (min-width: $csseco_bp_667) {
+					font-size: 24px;
+					line-height: 26px;
+					padding-top: 0;
+				}
+				@media screen and (min-width: $csseco_bp_751) {
+					font-size: 30px;
+					line-height: 32px;
+				}
+				@media screen and (min-width: $csseco_bp_836) {
+					font-size: 32px;
+					line-height: 34px;
+				}
+				@media screen and (min-width: $csseco_bp_901) {
+					font-size: 34px;
+  					line-height: 37px;
+				}
+				@media screen and (min-width: $csseco_bp_1001) {
+					font-size: 38px;
+					line-height: 45px;
+				}
+				@media screen and (min-width: $csseco_bp_1078) {
+					font-size: 46px;
+					line-height: normal;
+					padding-top: 0;
+				}
+			}
+			p {
+				color: #fff;
+				font-family: 'Asap-Italic';
+				font-size: 12px;
+				line-height: 1.3;
+				margin: 5px 0 10px;
+				max-width: 195px;
+				padding: 0;
+				@media screen and (min-width: $csseco_bp_366) {
+					margin-top: 10px;
+				}
+				@media screen and (min-width: $csseco_bp_376) {
+					padding: 0;
+					margin: 5px 0 0 0;
+				}
+				@media screen and (min-width: $csseco_bp_391) {
+					margin-top: 0;
+					max-width: 228px;
+				}
+				@media screen and (min-width: $csseco_bp_464) {
+  					//max-width: 52%;
+				}
+				@media screen and (min-width: $csseco_bp_477) {
+  					max-width: 59%;
+				}
+				@media screen and (min-width: $csseco_bp_569) {
+					font-size: 14px;
+				}
+				@media screen and (min-width: $csseco_bp_649) {
+					font-size: 14px;
+					max-width: 100%;
+				}
+				@media screen and (min-width: $csseco_bp_801) {
+					font-size: 16px;
+				}
+				@media screen and (min-width: $csseco_bp_1001) {
+					font-size: 18px;
+				}
+				@media screen and (min-width: $csseco_bp_1078) {
+					font-size: 23px;
+				}
+				br {
+					display: none;
+					@media screen and (min-width: $csseco_bp_649) {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	section#section2.formSection {
+		background: #202022;
+		position: relative;
+		z-index: 99999;
+		@media screen and (min-width: $csseco_bp_751) {
+			background: rgba(0, 0, 0, 0.7);
+			margin-top: -322px;
+		}	
+		@media screen and (min-width: $csseco_bp_961) {
+			background: rgba(0, 0, 0, 0.7);
+			margin-top: -221px;
+		}	
+		.col-md-8 {
+			@media screen and (min-width: $csseco_bp_541) {
+				padding-right: 5px;	
+			}
+			@media screen and (max-width: $csseco_bp_960) {
+				flex: 0 0 100%;
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+		.col-md-4 {
+			@media screen and (min-width: $csseco_bp_751) {
+				-webkit-box-flex: 0;
+				-ms-flex: 0 0 33.3333333333%;
+				flex: 0 0 33.3333333333%;
+				max-width: 33.3333333333%;	
+				&:first-child {
+					padding-right: 0;
+				}
+				&:first-child + div {
+					padding: 0 10px;
+				}
+				&:last-child {
+					padding-left: 0;
+				}
+			}
+			@media screen and (max-width: $csseco_bp_960) {
+				flex: 0 0 100%;
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+		.form-wrap {
+			text-align: center;
+			form.submitformmain {
+				margin: 0 auto;
+				max-width: 500px;
+				position: relative;
+				@media screen and (min-width: $csseco_bp_751) {
+					max-width: 691px;
+				}
+				@media screen and (min-width: $csseco_bp_901) {
+					max-width: 811px;
+				}
+				&::before {
+					color: #fff;
+					content: 'Inizia subito';
+					display: inline-block;
+					font-family: 'Asap-Bold';
+					font-size: 20px;
+					line-height: normal;
+					margin: 15px auto 18px;
+					padding: 0px 40px;
+					text-align: center;
+					text-transform: uppercase;
+					@media screen and (min-width: $csseco_bp_376) {
+						background-size: auto;
+					}
+					@media screen and (min-width: $csseco_bp_751) {
+						font-size: 28px;
+					}
+				}
+				.csseco_nameLname {
+					margin-bottom: 18px;
+					@media screen and (min-width: $csseco_bp_541) {
+						float: left;
+						margin-right: 9px;
+						width: 48%;
+					}
+					> div {
+						margin-bottom: 0;
+					}
+				}
+				.formEl {
+					position: relative;
+					float: left;
+					vertical-align: middle;
+					margin: 0;
+					margin-bottom: 10px;
+					text-align: left;
+					&.btn {
+						position: relative;
+						border: medium none;
+						padding: 0;
+						width: 100%;
+					}
+					&.agreementC {
+						color: #FFF;
+						font-family: 'Asap-Regular';
+						margin: 0 0 18px;
+						label {
+							display: inline;
+						}
+					}
+					.input {
+						position: relative;
+					}
+					span.icon {
+						position: relative;
+						display: inline-block;
+						vertical-align: middle;
+						width: 40px;
+						height: 40px;
+						background-position: center;
+						background-repeat: no-repeat;
+						z-index: 2;
+						pointer-events: none;
+						&.icon-user {
+							background-image: url("../imgs/section2/user.png");
+						}
+						&.icon-country {
+							background-image: url("../imgs/section2/country.png");
+						}
+						&.icon-email {
+							background-image: url("../imgs/section2/email.png");
+						}
+						&.icon-phone {
+							background-image: url("../imgs/section2/phone.png");
+						}
+					}
+					input[type="text"], 
+					input[type="email"],
+					input[type="tel"], 
+					select.counteryselectorclass {
+  						border: 1px solid #000;
+						color: #484848;
+  						height: 37px;
+						line-height: 37px;
+						padding-left: 10px;
+						width: 100%;
+						z-index: 1;
+					}
+					select.counteryselectorclass {
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						appearance: none;
+						background: url("../imgs/section2/selectgreen.jpg") no-repeat 100% 0,#fff;
+					}
+					button[type="submit"],
+					div#checksubmit {
+						border: 0;
+						border-bottom: 4px solid #608c2f;
+						border-radius: 0;
+						background: #8cc052;
+						color: #fff;
+						cursor: pointer;
+						display: block;
+						font-family: 'Asap-Bold';
+						font-size: 23px;
+						height: 91px;
+						margin: 0 auto;
+						position: relative;
+						text-align: center;
+						text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+						white-space: normal;
+						width: 254px;
+					}
+					button[type="submit"] {}
+					div#checksubmit {
+						display: none;
+						opacity: .5;
+						padding: 25px 0 0;
+					}
+					.inputerror {
+						color: #ff9800;
+						font-size: 10px;
+						position: absolute;
+						top: 37px;
+					}
+					.agreementerror {
+						color: #ff9800;
+						font-size: 10px;
+					}
+					&.fname {
+						width: 50%;
+						margin-right: 0;
+					}
+					&.lname {
+						width: 50%;
+					}
+					&.email {
+						margin-bottom: 18px;
+						width: 100%;
+						@media screen and (min-width: $csseco_bp_541) {
+							width: 50%;
+						}
+					}
+					&.country {
+						margin-bottom: 18px;
+						width: 100%;
+						@media screen and (min-width: $csseco_bp_541) {
+							margin-right: 9px;
+							width: 48%;
+						}
+					}
+					&.phone {
+						margin-bottom: 18px;
+						width: 100%;
+						@media screen and (min-width: $csseco_bp_541) {
+							width: 50%;
+						}
+						.phone-prefix {
+							float: left;
+							width: 20%;
+						}
+						.phone-number {
+							left: auto;
+							padding-left: 10px;
+    						right: 0;
+							width: 80%;
+						}
+					}
+				}
+			}
+		}
+	}
+	section#section3.features {
+		background: #FFF;
+		overflow: hidden;
+		.feat-col {
+			padding: 40px 30px;	
+			position: relative;
+			@media screen and (min-width: $csseco_bp_751) {
+				padding-right: 0;
+				width: 50%;
+				&::after {
+					background-image: url("../imgs/section3/screens.png");
+					background-repeat: no-repeat;
+					content: "";
+					height: 598px;
+					left: 120%;
+					position: absolute;
+					top: 50px;
+					width: 554px;
+				}
+			}
+			h3 {
+				position: relative;
+				margin: 0 auto 40px;
+				font-family: 'Asap-BoldItalic';
+				font-size: 26px;
+				color: #273140;
+				text-align: left;
+				&::after {
+					background-color: #8cc052;
+					bottom: -15px;
+					content: "";
+					height: 5px;
+					left: 0;
+					position: absolute;
+					width: 62px;
+				}
+			}
+			ul {
+				border-spacing: 0 20px;
+				display: block;
+				list-style: none;
+				margin: auto 0;
+				padding: 0;
+				text-align: left;
+				@media screen and (min-width: $csseco_bp_751) {
+					display: table;
+				}
+				li {
+					background-position: top 5px left;
+					background-size: 22px auto;
+					background-repeat: no-repeat;
+					color: #2b2d32;
+    				font-family: 'Asap-Regular';
+					font-size: 15px;
+					line-height: normal;
+					margin: 5px 0px 30px;
+					padding-left: 35px;
+					@media screen and (min-width: $csseco_bp_751) {
+						background-position: top 20px left;
+						background-size: auto;
+						display: table-cell;
+						padding: 90px 30px 30px 0;
+						width: 20%;
+					}
+					span  {
+						display: block;
+						font-weight: bold;
+						font-size: 18px;
+						padding-bottom: 10px;
+						&+span {
+							display: none;
+							font-size: 15px;
+							font-weight: 400;
+							@media screen and (min-width: $csseco_bp_751) {
+								display: block;
+							}
+						}
+					}
+					&.item-1 { background-image: url("../imgs/section3/icon-1.png"); }
+					&.item-2 { background-image: url("../imgs/section3/icon-2.png"); }
+					&.item-3 { 
+						background-image: url("../imgs/section3/icon-3.png"); 
+						span:first-child {
+							padding-bottom: 5px;
+							padding-top: 5px;
+						}
+					}
+					&.item-4 { background-image: url("../imgs/section3/icon-4.png"); }
+				}
+			}
+		}
+	}
+}
